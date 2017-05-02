@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="orbis.academy" >
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera2.full" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+        The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+        Google Maps Android API v2, but you must specify either coarse or fine
+        location permissions for the 'MyLocation' functionality. -->
+<!-- The following two permissions are not required to use Google Maps Android API v2, but are recommended. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_android_map_api_key" />
+
+<!-- City Guide -->
+        <activity
+            android:name=".cityguide.MapsActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+<!--&lt;!&ndash; Memeify &ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name=".memeify.TakePictureActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SEND" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<data android:mimeType="@string/image_mime_type" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<activity-->
+            <!--android:name=".memeify.EnterTextActivity"-->
+            <!--android:parentActivityName="orbis.academy.memeify.TakePictureActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
+
+<!--&lt;!&ndash; Android Camera2API&ndash;&gt;-->
+        <!--<activity android:name=".androidcamera2api.AndroidCameraApi">-->
+        <!--</activity>-->
+
+<!-- Are We There Yet? -->
+        <!--<activity-->
+            <!--android:name=".arewethereyet.AllGeofencesActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:configChanges="orientation|keyboardHidden">-->
+        <!--</activity>-->
+
+        <!--<service android:name=".arewethereyet.AreWeThereIntentService"/>-->
+
+    </application>
+
+</manifest>

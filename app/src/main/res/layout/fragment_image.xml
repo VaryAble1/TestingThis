@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--specifying the scene imported as drawable by using android:src XML attribute.
+    Notice the drawable name is generic, so the system will pick the correct drawable
+    according to the screen density of the device you’re running the app on.-->
+
+    <!--The dimensions of the ImageView may change in a way that doesn’t match with the imported drawable.
+    Hence, set the scaleType attribute to centerCrop to automatically resize and crop the
+    image in this case.-->
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/a_photo_of_the_scenery"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scene"/>
+
+</RelativeLayout>
